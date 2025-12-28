@@ -13,6 +13,12 @@ const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 const HeroShefiStyle = () => {
   return (
     <section className="relative min-h-screen hero-gradient overflow-hidden">
+      {/* Subtle floating shimmer effect in background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/3 rounded-full blur-3xl animate-float-slow-delayed" />
+      </div>
+
       {/* Left side images */}
       <div className="absolute left-0 top-0 h-full w-1/4 hidden lg:block pointer-events-none">
         <div className="absolute top-24 left-4 w-40 h-52 transform -rotate-6">
