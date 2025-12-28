@@ -19,12 +19,11 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+const navLinks = [
     { label: "Home", href: "/" },
-    { label: "What We Do", href: "/#what-we-do" },
     { label: "Events", href: "/events" },
     { label: "Partners", href: "/#partners" },
-    { label: "Community", href: WHATSAPP_URL, external: true },
+    { label: "Testimonials", href: "/#testimonials" },
   ];
 
   const handleNavClick = (href: string) => {
@@ -37,10 +36,10 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-md border-b border-border py-4" 
-          : "bg-transparent py-6"
+          ? "glass border-b border-border/50 py-3" 
+          : "py-5"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -55,17 +54,7 @@ const Navigation = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              link.external ? (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {link.label}
-                </a>
-              ) : link.href.startsWith("/#") ? (
+              link.href.startsWith("/#") ? (
                 <a
                   key={link.label}
                   href={link.href}
@@ -93,10 +82,9 @@ const Navigation = () => {
                 </Link>
               )
             ))}
-            <Button 
+<Button 
               asChild
-              size="sm" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 text-sm font-medium hover-lift border border-primary/20"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Join the Community
@@ -118,18 +106,7 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 bg-background border border-border rounded-lg p-6 space-y-4">
             {navLinks.map((link) => (
-              link.external ? (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-left py-2 font-medium text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ) : link.href.startsWith("/#") ? (
+              link.href.startsWith("/#") ? (
                 <a
                   key={link.label}
                   href={link.href}

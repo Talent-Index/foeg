@@ -1,24 +1,22 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
+import HeroShefiStyle from "@/components/HeroShefiStyle";
 import WhoItsFor from "@/components/WhoItsFor";
-import WhatWeDo from "@/components/WhatWeDo";
-import Community from "@/components/Community";
-import SocialProof from "@/components/SocialProof";
-import Partners from "@/components/Partners";
-import FinalCTA from "@/components/FinalCTA";
+import ByTheNumbers from "@/components/ByTheNumbers";
+import PartnerLogoWall from "@/components/PartnerLogoWall";
+import TestimonialsShefiStyle from "@/components/TestimonialsShefiStyle";
+import FinalCTAShefi from "@/components/FinalCTAShefi";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
+      <HeroShefiStyle />
       <WhoItsFor />
-      <WhatWeDo />
-      <Community />
-      <SocialProof />
-      <Partners />
-      <FinalCTA />
+      <ByTheNumbers />
+      <PartnerLogoWall />
+      <TestimonialsShefiStyle />
+      <FinalCTAShefi />
       <Footer />
     </div>
   );
