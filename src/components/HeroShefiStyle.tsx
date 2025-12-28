@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import OnboardingTrigger from "./OnboardingTrigger";
 import miniHackCover from "@/assets/events/mini-hack-cover.png";
 import gameJamCover from "@/assets/events/game-jam-cover.jpg";
 import agiTrackCover from "@/assets/events/agi-track-cover.jpg";
@@ -91,13 +92,15 @@ const HeroShefiStyle = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <OnboardingTrigger />
           <Button 
             asChild
             size="lg" 
-            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-base font-medium hover-lift"
+            variant="outline"
+            className="border-primary/30 text-foreground hover:bg-primary/5 hover:border-primary/50 rounded-full px-8 py-6 text-base"
           >
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              Join the FOEG Labs Community
+              Join Community
             </a>
           </Button>
           <Button 
