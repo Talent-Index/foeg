@@ -22,10 +22,10 @@ const Navigation = () => {
 
   const navLinks = [
     { label: "Home", href: "/" },
+    { label: "Pathways", href: "/#pathways" },
     { label: "Products", href: "/products" },
     { label: "Events", href: "/events" },
     { label: "Partners", href: "/#partners" },
-    { label: "Testimonials", href: "/#testimonials" },
   ];
 
   const handleNavClick = (href: string) => {
