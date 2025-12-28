@@ -71,7 +71,7 @@ const HeroShefiStyle = () => {
       </div>
 
       {/* Center content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 pb-24 min-h-screen flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 container mx-auto px-4 pt-32 pb-32 min-h-screen flex flex-col items-center justify-center text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium leading-[1.1] mb-8 max-w-4xl animate-fade-up">
           FOEG Labs is the <span className="italic">frontier</span> of ecosystem growth.
         </h1>
@@ -84,11 +84,11 @@ const HeroShefiStyle = () => {
           Community-led programs • Events • Founder support • Partner activations
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+        <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <Button 
             asChild
             size="lg" 
-            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-base font-medium hover-lift border border-primary/20"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-base font-medium hover-lift"
           >
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               Join the FOEG Labs Community
@@ -98,7 +98,7 @@ const HeroShefiStyle = () => {
             asChild
             size="lg" 
             variant="outline"
-            className="border-foreground/20 text-foreground hover:bg-foreground/5 rounded-full px-8 py-6 text-base"
+            className="border-primary/30 text-foreground hover:bg-primary/5 hover:border-primary/50 rounded-full px-8 py-6 text-base"
           >
             <Link to="/events">
               Explore Events
@@ -108,11 +108,11 @@ const HeroShefiStyle = () => {
       </div>
 
       {/* Scrolling text marquee at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 py-4 overflow-hidden">
+      <div className="absolute bottom-0 left-0 right-0 py-6 overflow-hidden bg-gradient-to-t from-background/50 to-transparent">
         <div className="flex whitespace-nowrap animate-marquee">
-          {[...Array(4)].map((_, i) => (
-            <span key={i} className="text-primary/40 font-display italic text-2xl mx-8">
-              the frontier of ecosystem growth
+          {[...Array(8)].map((_, i) => (
+            <span key={i} className="text-foreground/60 font-display italic text-xl md:text-2xl mx-8 uppercase tracking-widest">
+              the frontier of ecosystem growth •
             </span>
           ))}
         </div>

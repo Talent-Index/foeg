@@ -37,10 +37,10 @@ const ProductCard = ({
   };
 
   const badgeColors: Record<string, string> = {
-    Learning: "bg-primary/90 text-primary-foreground",
-    Hackathons: "bg-accent/90 text-accent-foreground",
-    Spotlight: "bg-foreground/90 text-background",
-    Community: "bg-primary/80 text-primary-foreground",
+    Learning: "bg-primary text-primary-foreground",
+    Hackathons: "bg-primary/80 text-primary-foreground",
+    Spotlight: "bg-foreground text-background",
+    Community: "bg-primary/90 text-primary-foreground",
   };
 
   return (
@@ -111,7 +111,7 @@ const ProductCard = ({
         <div className="flex gap-3 pt-3">
           <Button
             asChild
-            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full flex-1 hover-lift border border-primary/20"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full flex-1 hover-lift"
           >
             <a
               href={primaryLink.url}
@@ -127,7 +127,7 @@ const ProductCard = ({
             <Button
               asChild
               variant="outline"
-              className="border-foreground/20 text-foreground hover:bg-foreground/5 rounded-full"
+              className="border-primary/30 text-foreground hover:bg-primary/5 hover:border-primary/50 rounded-full"
             >
               <a
                 href={secondaryLink.url}

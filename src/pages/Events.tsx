@@ -100,7 +100,7 @@ const EventCard = ({ event }: { event: Event }) => {
         <div className="flex gap-3 pt-3">
           <Button 
             asChild
-            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full flex-1 hover-lift border border-primary/20"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full flex-1 hover-lift"
           >
             <a href={event.lumaUrl} target="_blank" rel="noopener noreferrer">
               View on Luma
@@ -110,7 +110,7 @@ const EventCard = ({ event }: { event: Event }) => {
           <Button 
             asChild
             variant="outline"
-            className="border-foreground/20 text-foreground hover:bg-foreground/5 rounded-full"
+            className="border-primary/30 text-foreground hover:bg-primary/5 hover:border-primary/50 rounded-full"
           >
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               Join Community
