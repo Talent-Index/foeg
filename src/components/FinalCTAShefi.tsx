@@ -15,7 +15,7 @@ const FinalCTAShefi = () => {
         <Button 
           asChild
           size="lg" 
-          className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium hover-lift border border-primary/20"
+          className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium hover-lift"
         >
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             Join FOEG Labs on WhatsApp

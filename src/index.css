@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 /* 
-FOEG Labs Design System - SheFi-inspired
-Warm cream, editorial serif, soft gradients, premium spacing
+FOEG Labs Design System
+Warm cream background, FOEG Purple accent, editorial serif, premium spacing
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Warm cream background like SheFi */
+    /* Warm cream background */
     --background: 43 33% 94%;
     --foreground: 0 0% 8%;
 
@@ -20,83 +20,86 @@ All colors MUST be HSL.
     --popover: 43 33% 94%;
     --popover-foreground: 0 0% 8%;
 
-    /* Soft yellow-lime accent like SheFi CTA */
-    --primary: 56 72% 66%;
-    --primary-foreground: 0 0% 8%;
+    /* FOEG Purple - Brand Primary (#6D28D9 = 263 84% 50%) */
+    --primary: 263 84% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Lavender highlight (FOEG twist) */
-    --secondary: 262 50% 75%;
-    --secondary-foreground: 0 0% 8%;
+    /* Light purple for secondary */
+    --secondary: 263 50% 90%;
+    --secondary-foreground: 263 84% 35%;
 
     /* Muted grays */
     --muted: 40 15% 90%;
     --muted-foreground: 0 0% 35%;
 
-    --accent: 56 72% 66%;
-    --accent-foreground: 0 0% 8%;
+    /* Accent matches primary */
+    --accent: 263 84% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 40 20% 85%;
     --input: 40 20% 85%;
-    --ring: 56 72% 66%;
+    --ring: 263 84% 50%;
 
     --radius: 1.5rem;
     
-    /* Gradient colors */
+    /* Gradient colors for hero */
     --gradient-pink: 350 70% 85%;
     --gradient-peach: 25 80% 85%;
-    --gradient-yellow: 56 72% 75%;
+    --gradient-purple: 263 60% 90%;
     
     /* Sidebar (keep for compatibility) */
     --sidebar-background: 43 33% 94%;
     --sidebar-foreground: 0 0% 23%;
-    --sidebar-primary: 0 0% 8%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 43 20% 92%;
-    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-primary: 263 84% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 263 50% 95%;
+    --sidebar-accent-foreground: 263 84% 35%;
     --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 56 72% 66%;
+    --sidebar-ring: 263 84% 50%;
   }
 
   .dark {
-    --background: 0 0% 6%;
+    --background: 240 10% 8%;
     --foreground: 43 20% 96%;
 
-    --card: 0 0% 8%;
+    --card: 240 10% 10%;
     --card-foreground: 43 20% 96%;
 
-    --popover: 0 0% 8%;
+    --popover: 240 10% 10%;
     --popover-foreground: 43 20% 96%;
 
-    --primary: 56 72% 60%;
-    --primary-foreground: 0 0% 6%;
+    /* FOEG Purple - slightly lighter in dark mode for visibility */
+    --primary: 263 84% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 60% 65%;
-    --secondary-foreground: 43 20% 96%;
+    --secondary: 263 40% 20%;
+    --secondary-foreground: 263 60% 80%;
 
-    --muted: 0 0% 14%;
+    --muted: 240 10% 18%;
     --muted-foreground: 43 10% 60%;
 
-    --accent: 56 72% 60%;
-    --accent-foreground: 0 0% 6%;
+    --accent: 263 84% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 56 72% 60%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 263 84% 60%;
 
-    --sidebar-background: 0 0% 8%;
+    /* Sidebar dark */
+    --sidebar-background: 240 10% 8%;
     --sidebar-foreground: 43 10% 96%;
-    --sidebar-primary: 56 72% 50%;
+    --sidebar-primary: 263 84% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 16%;
-    --sidebar-accent-foreground: 43 10% 96%;
-    --sidebar-border: 0 0% 16%;
-    --sidebar-ring: 56 72% 60%;
+    --sidebar-accent: 263 40% 15%;
+    --sidebar-accent-foreground: 263 60% 80%;
+    --sidebar-border: 240 10% 18%;
+    --sidebar-ring: 263 84% 60%;
   }
 }
 
@@ -126,31 +129,56 @@ All colors MUST be HSL.
     -webkit-backdrop-filter: blur(12px);
   }
 
-  /* SheFi-style hero gradient */
+  /* Hero gradient - cream with subtle purple tint */
   .hero-gradient {
     background: radial-gradient(
       ellipse 80% 70% at 50% 40%,
-      hsl(350 70% 90% / 0.6) 0%,
-      hsl(25 80% 90% / 0.4) 30%,
-      hsl(43 33% 94%) 70%
+      hsl(263 60% 95% / 0.4) 0%,
+      hsl(350 70% 92% / 0.3) 30%,
+      hsl(var(--background)) 70%
     );
   }
 
-  /* Pastel gradient cards like SheFi */
+  .dark .hero-gradient {
+    background: radial-gradient(
+      ellipse 80% 70% at 50% 40%,
+      hsl(263 60% 20% / 0.4) 0%,
+      hsl(263 40% 15% / 0.3) 30%,
+      hsl(var(--background)) 70%
+    );
+  }
+
+  /* Pastel gradient cards */
   .card-gradient {
     background: linear-gradient(
       180deg,
-      hsl(320 60% 92%) 0%,
-      hsl(56 72% 88%) 100%
+      hsl(263 50% 95%) 0%,
+      hsl(263 40% 90%) 100%
     );
   }
 
-  /* Orange/peach testimonial band */
+  .dark .card-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(263 40% 15%) 0%,
+      hsl(263 30% 12%) 100%
+    );
+  }
+
+  /* Testimonial band */
   .testimonial-gradient {
     background: linear-gradient(
       180deg,
       hsl(25 80% 85%) 0%,
       hsl(35 70% 88%) 100%
+    );
+  }
+
+  .dark .testimonial-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(25 40% 15%) 0%,
+      hsl(35 30% 12%) 100%
     );
   }
 
@@ -177,6 +205,30 @@ All colors MUST be HSL.
   
   .hover-lift:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px hsl(0 0% 0% / 0.1);
+    box-shadow: 0 4px 12px hsl(263 84% 50% / 0.25);
+  }
+
+  /* Marquee animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
   }
 }

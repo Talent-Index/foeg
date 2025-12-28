@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import foegLogo from "@/assets/foeg-logo.png";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 
@@ -19,7 +20,7 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-const navLinks = [
+  const navLinks = [
     { label: "Home", href: "/" },
     { label: "Products", href: "/products" },
     { label: "Events", href: "/events" },
@@ -37,7 +38,7 @@ const navLinks = [
 
   return (
     <nav
-className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? "glass border-b border-border/50 py-3" 
           : "py-5"
@@ -53,7 +54,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               link.href.startsWith("/#") ? (
                 <a
@@ -83,9 +84,12 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 </Link>
               )
             ))}
-<Button 
+            
+            <ThemeToggle />
+            
+            <Button 
               asChild
-              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 text-sm font-medium hover-lift border border-primary/20"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 text-sm font-medium hover-lift"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Join the Community
@@ -94,18 +98,21 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 bg-background border border-border rounded-lg p-6 space-y-4">
+          <div className="lg:hidden mt-4 bg-card border border-border rounded-lg p-6 space-y-4">
             {navLinks.map((link) => (
               link.href.startsWith("/#") ? (
                 <a
