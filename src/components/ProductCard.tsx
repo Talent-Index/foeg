@@ -1,9 +1,12 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface ProductCardProps {
   title: string;
   description: string;
+  badge?: string;
+  coverImage?: string;
   primaryLink: {
     label: string;
     url: string;
@@ -13,118 +16,131 @@ interface ProductCardProps {
     url: string;
   };
   gradientVariant?: 1 | 2 | 3 | 4;
+  featured?: boolean;
 }
 
 const ProductCard = ({
   title,
   description,
+  badge,
+  coverImage,
   primaryLink,
   secondaryLink,
   gradientVariant = 1,
+  featured = false,
 }: ProductCardProps) => {
   const gradients = {
-    1: "bg-gradient-to-br from-background via-primary/20 to-primary/40",
-    2: "bg-gradient-to-br from-primary/30 via-background to-primary/20",
-    3: "bg-gradient-to-br from-background via-accent/20 to-primary/30",
-    4: "bg-gradient-to-br from-primary/40 via-accent/30 to-background",
+    1: "bg-gradient-to-br from-background via-primary/30 to-primary/50",
+    2: "bg-gradient-to-br from-primary/40 via-background to-accent/30",
+    3: "bg-gradient-to-br from-accent/30 via-primary/20 to-background",
+    4: "bg-gradient-to-br from-primary/50 via-accent/40 to-background",
+  };
+
+  const badgeColors: Record<string, string> = {
+    Learning: "bg-primary/90 text-primary-foreground",
+    Hackathons: "bg-accent/90 text-accent-foreground",
+    Spotlight: "bg-foreground/90 text-background",
+    Community: "bg-primary/80 text-primary-foreground",
   };
 
   return (
     <div
       className={cn(
-        "group relative border border-border rounded-xl overflow-hidden bg-card flex flex-col h-full",
+        "group bg-card rounded-3xl overflow-hidden border border-border",
         "transition-all duration-300 ease-out",
-        "hover:border-primary/60 hover:shadow-xl hover:shadow-primary/10",
-        "hover:-translate-y-1"
+        "hover:shadow-xl hover:shadow-primary/10 hover:border-primary/40",
+        "hover:-translate-y-1",
+        featured && "md:col-span-2"
       )}
     >
-      {/* Gradient Header Strip with animated overlay */}
-      <div className={cn("h-24 relative overflow-hidden", gradients[gradientVariant])}>
-        {/* Shimmer effect on hover */}
+      {/* Cover Image or Gradient */}
+      <div className={cn(
+        "relative overflow-hidden",
+        featured ? "aspect-[21/9]" : "aspect-video"
+      )}>
+        {coverImage ? (
+          <img
+            src={coverImage}
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className={cn("w-full h-full", gradients[gradientVariant])}>
+            {/* Gradient pattern overlay */}
+            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]" />
+          </div>
+        )}
+        
+        {/* Badge */}
+        {badge && (
+          <span
+            className={cn(
+              "absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide",
+              badgeColors[badge] || "bg-muted text-muted-foreground"
+            )}
+          >
+            {badge}
+          </span>
+        )}
+
+        {/* Hover overlay */}
         <div
           className={cn(
-            "absolute inset-0 opacity-0 group-hover:opacity-100",
-            "bg-gradient-to-r from-transparent via-white/10 to-transparent",
-            "translate-x-[-100%] group-hover:translate-x-[100%]",
-            "transition-all duration-700 ease-out"
-          )}
-        />
-        {/* Subtle glow pulse */}
-        <div
-          className={cn(
-            "absolute inset-0 opacity-0 group-hover:opacity-30",
-            "bg-gradient-to-t from-primary/20 to-transparent",
-            "transition-opacity duration-300"
+            "absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent",
+            "opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           )}
         />
       </div>
 
-      {/* Card Content */}
-      <div className="p-6 flex flex-col flex-1">
+      {/* Content */}
+      <div className="p-6 space-y-3">
         <h3
           className={cn(
-            "font-display font-bold text-lg uppercase tracking-wide text-foreground mb-3",
+            "font-serif text-xl font-semibold text-foreground leading-tight",
             "transition-colors duration-200",
             "group-hover:text-primary"
           )}
         >
           {title}
         </h3>
-        <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
+        <p className="text-muted-foreground text-sm leading-relaxed">
           {description}
         </p>
 
-        {/* Links */}
-        <div className="space-y-2 mt-auto">
-          <a
-            href={primaryLink.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              "inline-flex items-center text-primary font-medium text-sm",
-              "transition-all duration-200",
-              "hover:text-primary/80 hover:gap-1"
-            )}
+        {/* Buttons */}
+        <div className="flex gap-3 pt-3">
+          <Button
+            asChild
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full flex-1 hover-lift border border-primary/20"
           >
-            <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
-              {primaryLink.label}
-            </span>
-            <ArrowRight
-              className={cn(
-                "ml-1 h-4 w-4",
-                "transition-transform duration-300 ease-out",
-                "group-hover:translate-x-1"
-              )}
-            />
-          </a>
-
-          {secondaryLink && (
             <a
-              href={secondaryLink.url}
+              href={primaryLink.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={cn(
-                "block text-muted-foreground text-xs",
-                "transition-all duration-200",
-                "hover:text-foreground hover:translate-x-0.5"
-              )}
             >
-              {secondaryLink.label} →
+              {primaryLink.label}
+              <ExternalLink className="w-4 h-4 ml-2" />
             </a>
+          </Button>
+
+          {secondaryLink && (
+            <Button
+              asChild
+              variant="outline"
+              className="border-foreground/20 text-foreground hover:bg-foreground/5 rounded-full"
+            >
+              <a
+                href={secondaryLink.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {secondaryLink.label}
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </a>
+            </Button>
           )}
         </div>
       </div>
-
-      {/* Corner accent on hover */}
-      <div
-        className={cn(
-          "absolute top-0 right-0 w-12 h-12",
-          "bg-gradient-to-bl from-primary/20 to-transparent",
-          "opacity-0 group-hover:opacity-100",
-          "transition-opacity duration-300 ease-out",
-          "rounded-bl-xl"
-        )}
-      />
     </div>
   );
 };
