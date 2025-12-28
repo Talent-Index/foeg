@@ -5,10 +5,11 @@ const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 const Footer = () => {
   const location = useLocation();
 
-  const footerLinks = [
+const footerLinks = [
     { label: "Home", href: "/" },
     { label: "Events", href: "/events" },
     { label: "Partners", href: "/#partners" },
+    { label: "Testimonials", href: "/#testimonials" },
     { label: "Community", href: WHATSAPP_URL, external: true },
   ];
 
