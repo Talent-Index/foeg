@@ -3,14 +3,10 @@ import { Button } from "@/components/ui/button";
 const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 
 const stats = [
-  { value: "500+", label: "Community members" },
-  { value: "10+", label: "Events hosted" },
-  { value: "120+", label: "Builders supported" },
-  { value: "5+", label: "Cities reached" },
-  { value: "5+", label: "Partner activations" },
-  { value: "10+", label: "Workshops delivered" },
-  { value: "1+", label: "Mini Hack & Sprints hosted" },
-  { value: "11+", label: "Ecosystem partners" },
+  { value: "778+", label: "Community Members" },
+  { value: "522+", label: "Builders Supported" },
+  { value: "10+", label: "Events Hosted" },
+  { value: "5+", label: "Cities Reached" },
 ];
 
 const ByTheNumbers = () => {
