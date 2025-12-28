@@ -55,14 +55,14 @@ const ProductCard = ({
     >
       {/* Cover Image or Gradient */}
       <div className={cn(
-        "relative overflow-hidden",
+        "relative overflow-hidden bg-foreground/5",
         featured ? "aspect-[21/9]" : "aspect-video"
       )}>
         {coverImage ? (
           <img
             src={coverImage}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
           <div className={cn("w-full h-full", gradients[gradientVariant])}>
