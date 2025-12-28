@@ -30,13 +30,43 @@ const partners: Partner[] = [
   },
   {
     name: "Cartridge",
-    logoSrc: null, // Add logo: /public/logos/partners/cartridge.svg
+    logoSrc: "/logos/partners/cartridge.png",
     website: "https://cartridge.gg/",
   },
   {
     name: "CloudPlexo",
-    logoSrc: null, // Add logo: /public/logos/partners/cloudplexo.svg
+    logoSrc: "/logos/partners/cloudplexo.jpg",
     website: "https://www.cloudplexo.com/",
+  },
+  {
+    name: "The Graph",
+    logoSrc: "/logos/partners/thegraph.jpg",
+    website: "https://thegraph.com/",
+  },
+  {
+    name: "Adamur",
+    logoSrc: "/logos/partners/adamur.jpg",
+    website: "https://adamur.io/",
+  },
+  {
+    name: "HackQuest",
+    logoSrc: "/logos/partners/hackquest.png",
+    website: "https://hackquest.io/",
+  },
+  {
+    name: "Silicon Savannah Insider",
+    logoSrc: "/logos/partners/ssi.png",
+    website: "https://siliconsavannahinsider.com/",
+  },
+  {
+    name: "Scaffold-ETH",
+    logoSrc: "/logos/partners/scaffold-eth.jpg",
+    website: "https://scaffoldeth.io/",
+  },
+  {
+    name: "Antler",
+    logoSrc: "/logos/partners/antler.png",
+    website: "https://www.antler.co/",
   },
 ];
 
