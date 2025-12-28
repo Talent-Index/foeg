@@ -35,7 +35,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "FOEG Labs <onboarding@resend.dev>",
-        to: ["foeglabslimited@gmail.com"],
+        to: ["lavenderesther202@gmail.com"], // Temporary: change to your verified domain email after domain verification
         subject: `New Partnership Inquiry from ${name}`,
         html: `
           <h1>New Partnership Inquiry</h1>
