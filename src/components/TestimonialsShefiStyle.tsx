@@ -12,7 +12,7 @@ const testimonials = [
   {
     quote: "FOEG Labs has given me a platform to do what I love most: support builders throughout their development journey. From ideation to shipping real projects, the community is hands-on and highly collaborative. Winning a bounty at the Mini Hack was exciting, but what stands out more is the culture of experimentation and encouragement that FOEG Labs consistently fosters.",
     name: "Iano",
-    role: "DevRel, FOEG Labs",
+    role: "Contributor, FOEG Labs",
     image: ianoPhoto,
   },
   {
