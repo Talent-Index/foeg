@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import miniHackCover from "@/assets/events/mini-hack-cover.png";
 import gameJamCover from "@/assets/events/game-jam-cover.jpg";
 import agiTrackCover from "@/assets/events/agi-track-cover.jpg";
-import starknetCover from "@/assets/events/starknet-basecamp-cover.jpg";
+import womenConnectDuo from "@/assets/women-connect-duo.jpeg";
+import awardsWinners from "@/assets/awards-winners.jpeg";
+import womenConnectGroup from "@/assets/women-connect-group.jpeg";
+import hackathonAudience from "@/assets/hackathon-audience.jpeg";
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 
@@ -39,22 +42,29 @@ const HeroShefiStyle = () => {
       <div className="absolute right-0 top-0 h-full w-1/4 hidden lg:block pointer-events-none">
         <div className="absolute top-28 right-4 w-44 h-56 transform rotate-6">
           <img 
-            src={starknetCover} 
-            alt="Starknet Basecamp"
+            src={womenConnectDuo} 
+            alt="Women Connect event"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
         <div className="absolute top-1/3 right-12 w-40 h-52 transform -rotate-3">
           <img 
-            src={miniHackCover} 
-            alt="Community event"
+            src={awardsWinners} 
+            alt="Community awards winners"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
         <div className="absolute bottom-36 right-6 w-36 h-48 transform rotate-2">
           <img 
-            src={gameJamCover} 
-            alt="Workshop session"
+            src={womenConnectGroup} 
+            alt="Community group"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
+          />
+        </div>
+        <div className="absolute bottom-16 right-20 w-48 h-32 transform -rotate-2">
+          <img 
+            src={hackathonAudience} 
+            alt="Hackathon audience"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
