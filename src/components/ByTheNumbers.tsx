@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 
 const stats = [
-  { value: "—", label: "Community members", updating: true },
-  { value: "—", label: "Events hosted", updating: true },
-  { value: "—", label: "Builders supported", updating: true },
-  { value: "—", label: "Cities reached", updating: true },
-  { value: "—", label: "Partner activations", updating: true },
-  { value: "—", label: "Workshops delivered", updating: true },
-  { value: "—", label: "Hackathons & sprints", updating: true },
-  { value: "—", label: "Ecosystem partners", updating: true },
+  { value: "500+", label: "Community members" },
+  { value: "10+", label: "Events hosted" },
+  { value: "120+", label: "Builders supported" },
+  { value: "5+", label: "Cities reached" },
+  { value: "5+", label: "Partner activations" },
+  { value: "10+", label: "Workshops delivered" },
+  { value: "1+", label: "Mini Hack & Sprints hosted" },
+  { value: "11+", label: "Ecosystem partners" },
 ];
 
 const ByTheNumbers = () => {
@@ -35,11 +35,6 @@ const ByTheNumbers = () => {
               <div className="text-sm md:text-base text-foreground/70">
                 {stat.label}
               </div>
-              {stat.updating && (
-                <div className="text-xs text-muted-foreground mt-1 italic">
-                  Updating
-                </div>
-              )}
             </div>
           ))}
         </div>
