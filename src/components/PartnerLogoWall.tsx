@@ -1,17 +1,15 @@
 const partners = [
-  { name: "Avalanche", url: "https://www.avax.network" },
-  { name: "Team1", url: "https://www.team1.network" },
-  { name: "Starknet", url: "https://starknet.io" },
-  { name: "Sui", url: "https://sui.io" },
-  { name: "Antler", url: "https://antler.co" },
-  { name: "Curvegrid", url: "https://www.curvegrid.com" },
   { name: "BuidlGuidl", url: "https://buidlguidl.com" },
-  { name: "Dojo", url: "https://www.dojoengine.org" },
-  { name: "Cartridge", url: "https://cartridge.gg" },
+  { name: "Sui", url: "https://sui.io" },
+  { name: "Scaffold-ETH", url: "https://scaffoldeth.io" },
+  { name: "Curvegrid", url: "https://www.curvegrid.com" },
   { name: "CloudPlexo", url: "https://www.cloudplexo.com" },
-  { name: "Silicon Savannah Insider", url: "#" },
-  { name: "Girl Code", url: "#" },
+  { name: "HackQuest", url: "https://hackquest.io" },
   { name: "Adamur", url: "#" },
+  { name: "Project Mocha", url: "#" },
+  { name: "Girl Code", url: "#" },
+  { name: "Girls On-Chain", url: "#" },
+  { name: "SSI", url: "#" },
 ];
 
 const PartnerLogoWall = () => {
