@@ -3,9 +3,11 @@ const partners = [
   { name: "Sui", url: "https://sui.io" },
   { name: "BuidlGuidl", url: "https://buidlguidl.com" },
   { name: "Antler", url: "https://antler.co" },
-  { name: "H.E.R DAO", url: "https://www.herdao.xyz" },
-  { name: "Starknet Africa", url: "https://starknet.io" },
-  { name: "Nairobi Blockchain Week", url: "https://nairobi.blockchainweek.africa" },
+  { name: "Dojo", url: "https://www.dojoengine.org" },
+  { name: "Cartridge", url: "https://cartridge.gg" },
+  { name: "CloudPlexo", url: "https://www.cloudplexo.com" },
+  { name: "Avalanche", url: "https://www.avax.network" },
+  { name: "Team1", url: "https://www.team1.network" },
 ];
 
 const Partners = () => {

@@ -5,7 +5,7 @@ import { MapPin, Users, ExternalLink } from "lucide-react";
 import miniHackCover from "@/assets/events/mini-hack-cover.png";
 import gameJamCover from "@/assets/events/game-jam-cover.jpg";
 import agiTrackCover from "@/assets/events/agi-track-cover.jpg";
-import starknetCover from "@/assets/events/starknet-basecamp-cover.jpg";
+
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 
@@ -48,15 +48,6 @@ const events: Event[] = [
     host: "Frontier Of Ecosystem Growth",
     attendance: "110 Went",
     lumaUrl: "https://luma.com/yjzecwnk",
-    type: "virtual",
-  },
-  {
-    id: "4",
-    title: "Starknet Basecamp | Africa",
-    coverImage: starknetCover,
-    host: "Frontier Of Ecosystem Growth & H.E.R DAO",
-    attendance: "445 Went",
-    lumaUrl: "https://luma.com/yok34k4o",
     type: "virtual",
   },
 ];

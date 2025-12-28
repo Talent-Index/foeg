@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
+import communityGroup from "@/assets/community-group.jpeg";
 
-const TWITTER_URL = "https://twitter.com/FOEG_Labs";
+const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 
 const Community = () => {
   return (
     <section id="community" className="py-24 md:py-32">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
               Community is the foundation
@@ -18,18 +19,19 @@ const Community = () => {
               asChild
               className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8"
             >
-              <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Join FOEG Labs
               </a>
             </Button>
           </div>
 
-          {/* Subtle placeholder */}
-          <div className="aspect-square bg-muted rounded-2xl flex items-center justify-center">
-            <div className="text-center text-muted-foreground">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10" />
-              <p className="text-sm">Community</p>
-            </div>
+          {/* Community group photo */}
+          <div className="rounded-2xl overflow-hidden">
+            <img 
+              src={communityGroup} 
+              alt="FOEG Labs community group photo"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
