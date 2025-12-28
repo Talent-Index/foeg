@@ -5,6 +5,7 @@ import ByTheNumbers from "@/components/ByTheNumbers";
 import PartnerLogoWall from "@/components/PartnerLogoWall";
 import TestimonialsShefiStyle from "@/components/TestimonialsShefiStyle";
 import FinalCTAShefi from "@/components/FinalCTAShefi";
+import ImportantLinks from "@/components/ImportantLinks";
 import Footer from "@/components/Footer";
 import NewYearBanner from "@/components/NewYearBanner";
 import { useConfetti } from "@/hooks/useConfetti";
@@ -23,6 +24,7 @@ const Index = () => {
       <PartnerLogoWall />
       <TestimonialsShefiStyle />
       <FinalCTAShefi />
+      <ImportantLinks />
       <Footer />
     </div>
   );
