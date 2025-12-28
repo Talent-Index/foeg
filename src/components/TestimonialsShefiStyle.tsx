@@ -1,21 +1,25 @@
+import sharonPhoto from "@/assets/testimonial-sharon.jpeg";
+import ianoPhoto from "@/assets/testimonial-iano.jpeg";
+import joramPhoto from "@/assets/testimonial-joram.webp";
+
 const testimonials = [
   {
-    quote: "Placeholder — awaiting verified quote from FOEG Labs community member.",
-    name: "Community Member",
-    role: "Builder",
-    placeholder: true,
+    quote: "Being part of FOEG Labs as a contributor was deeply fulfilling. Leading the Knowledge Sharing Sessions reminded me how powerful community-driven learning can be. The space was intentional, supportive, and genuinely focused on growth. FOEG Labs doesn't just talk about supporting builders — it creates the conditions for people to learn and thrive together.",
+    name: "Sharon",
+    role: "Contributor, FOEG Labs",
+    image: sharonPhoto,
   },
   {
-    quote: "Placeholder — awaiting verified quote from FOEG Labs founder.",
-    name: "Founder",
-    role: "Startup",
-    placeholder: true,
+    quote: "FOEG Labs has given me a platform to do what I love most: support builders throughout their development journey. From ideation to shipping real projects, the community is hands-on and highly collaborative. Winning a bounty at the Mini Hack was exciting, but what stands out more is the culture of experimentation and encouragement that FOEG Labs consistently fosters.",
+    name: "Iano",
+    role: "DevRel, FOEG Labs",
+    image: ianoPhoto,
   },
   {
-    quote: "Placeholder — awaiting verified quote from FOEG Labs partner.",
-    name: "Partner",
-    role: "Ecosystem",
-    placeholder: true,
+    quote: "Being inducted into the Startup Founders Spotlight by Avalanche Team1 and FOEG Labs was incredibly affirming. Building Cpesa has been a challenging journey, and having my work recognized within the ecosystem motivated me to keep pushing forward. FOEG Labs creates real visibility for builders and helps turn effort into opportunity.",
+    name: "Joram",
+    role: "Builder, Startup Founders Spotlight",
+    image: joramPhoto,
   },
 ];
 
@@ -44,20 +48,22 @@ const TestimonialsShefiStyle = () => {
 
                 {/* Quote content */}
                 <div className="flex-1 pt-4">
-                  <p className={`text-lg md:text-xl leading-relaxed mb-6 ${testimonial.placeholder ? 'italic text-muted-foreground' : ''}`}>
+                  <p className="text-lg md:text-xl leading-relaxed mb-6">
                     {testimonial.quote}
                   </p>
-                  <div className={testimonial.placeholder ? 'text-muted-foreground' : 'text-primary'}>
+                  <div className="text-primary">
                     <span className="font-semibold text-lg">{testimonial.name}</span>
-                    {testimonial.role && (
-                      <span className="text-muted-foreground ml-2">— {testimonial.role}</span>
-                    )}
+                    <span className="text-muted-foreground ml-2">— {testimonial.role}</span>
                   </div>
                 </div>
 
-                {/* Portrait placeholder */}
-                <div className="w-32 h-40 md:w-40 md:h-52 bg-gradient-to-b from-foreground/10 to-foreground/5 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <div className="w-20 h-20 rounded-full bg-foreground/10" />
+                {/* Portrait image */}
+                <div className="w-32 h-40 md:w-40 md:h-52 rounded-2xl overflow-hidden flex-shrink-0">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover grayscale"
+                  />
                 </div>
               </div>
             ))}
