@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroShefiStyle from "@/components/HeroShefiStyle";
 import WhoItsFor from "@/components/WhoItsFor";
+import BuilderPathways from "@/components/BuilderPathways";
 import ByTheNumbers from "@/components/ByTheNumbers";
 import PartnerLogoWall from "@/components/PartnerLogoWall";
 import TestimonialsShefiStyle from "@/components/TestimonialsShefiStyle";
@@ -20,6 +21,7 @@ const Index = () => {
       <NewYearBanner />
       <HeroShefiStyle />
       <WhoItsFor />
+      <BuilderPathways />
       <ByTheNumbers />
       <PartnerLogoWall />
       <TestimonialsShefiStyle />

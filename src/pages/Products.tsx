@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import kssCover from "@/assets/products/kss-cover.jpeg";
 import miniHackCover from "@/assets/products/mini-hack-cover.jpeg";
 import spotlightCover from "@/assets/products/spotlight-cover.jpeg";
-import gocCover from "@/assets/products/goc-cover.png";
+
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
 
@@ -54,18 +54,6 @@ const products = [
       url: "https://futuristic-dog-9aa.notion.site/2a11447232f1807cb668e8c93fda9336?pvs=149",
     },
     gradientVariant: 3 as const,
-  },
-  {
-    title: "Girls On Chain",
-    description:
-      "A community and support space for girls and women to learn, build confidence, and grow in web3 and tech.",
-    badge: "Community",
-    coverImage: gocCover,
-    primaryLink: {
-      label: "Join Community",
-      url: "https://chat.whatsapp.com/GwHKpJQboXaE8ppKCe205W",
-    },
-    gradientVariant: 4 as const,
   },
 ];
 

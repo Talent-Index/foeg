@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Events from "./pages/Events";
 import Blueprint from "./pages/Blueprint";
 import Products from "./pages/Products";
+import PathwayDetail from "./pages/PathwayDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/blueprint" element={<Blueprint />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/pathways/:pathwayId" element={<PathwayDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
