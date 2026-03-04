@@ -1,33 +1,21 @@
-import Navigation from "@/components/Navigation";
-import HeroShefiStyle from "@/components/HeroShefiStyle";
-import WhoItsFor from "@/components/WhoItsFor";
-import BuilderPathways from "@/components/BuilderPathways";
-import ByTheNumbers from "@/components/ByTheNumbers";
+import PlatformNav from "@/components/layout/PlatformNav";
+import PlatformHero from "@/components/hero/PlatformHero";
+import ProductPillars from "@/components/platform/ProductPillars";
+import PlatformFooter from "@/components/layout/PlatformFooter";
 import PartnerLogoWall from "@/components/PartnerLogoWall";
 import TestimonialsShefiStyle from "@/components/TestimonialsShefiStyle";
-import FinalCTAShefi from "@/components/FinalCTAShefi";
-import ImportantLinks from "@/components/ImportantLinks";
-import Footer from "@/components/Footer";
-import NewYearBanner from "@/components/NewYearBanner";
-import { useConfetti } from "@/hooks/useConfetti";
+import BuilderPathways from "@/components/BuilderPathways";
 
 const Index = () => {
-  // Trigger confetti on first visit
-  useConfetti();
-
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      <NewYearBanner />
-      <HeroShefiStyle />
-      <WhoItsFor />
+      <PlatformNav />
+      <PlatformHero />
+      <ProductPillars />
       <BuilderPathways />
-      <ByTheNumbers />
       <PartnerLogoWall />
       <TestimonialsShefiStyle />
-      <FinalCTAShefi />
-      <ImportantLinks />
-      <Footer />
+      <PlatformFooter />
     </div>
   );
 };
