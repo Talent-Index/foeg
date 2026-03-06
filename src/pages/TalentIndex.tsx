@@ -34,11 +34,11 @@ const TalentIndex = () => {
           >
             <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">Talent Index</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium tracking-tight">
-              Access verified{" "}
-              <span className="text-muted-foreground">builders worldwide.</span>
+              Deploy elite AI &{" "}
+              <span className="text-muted-foreground">blockchain engineers.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-              Search, match, and deploy elite AI and Web3 builders with verified skills and on-chain reputation.
+              Access verified builders with proven experience deploying AI agents, blockchain infrastructure, and production systems.
             </p>
           </motion.div>
 
@@ -53,7 +53,7 @@ const TalentIndex = () => {
               <Search className="h-5 w-5 text-muted-foreground ml-3" />
               <input
                 type="text"
-                placeholder="Search builders by skill, role, or ecosystem..."
+                placeholder="Search by skill: AI engineers, blockchain, full-stack, infrastructure..."
                 className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"
               />
               <Button size="sm" className="rounded-full px-5 bg-primary text-primary-foreground">
