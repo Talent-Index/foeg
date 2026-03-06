@@ -47,7 +47,7 @@ const PlatformHero = () => {
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card/50 text-xs font-mono uppercase tracking-widest text-muted-foreground">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Infrastructure Platform
+            Enterprise Infrastructure Platform
           </span>
         </motion.div>
 
