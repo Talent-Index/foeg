@@ -12,6 +12,7 @@ import Platform from "./pages/Platform";
 import Enterprise from "./pages/Enterprise";
 import DeveloperPortal from "./pages/DeveloperPortal";
 import TalentIndex from "./pages/TalentIndex";
+import WhyFoeg from "./pages/WhyFoeg";
 import Ecosystem from "./pages/Ecosystem";
 import CaseStudies from "./pages/CaseStudies";
 import Research from "./pages/Research";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/ecosystem" element={<Ecosystem />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/why-foeg" element={<WhyFoeg />} />
           <Route path="/events" element={<Events />} />
           <Route path="/blueprint" element={<Blueprint />} />
           <Route path="/products" element={<Products />} />
