@@ -89,7 +89,7 @@ const PlatformFooter = () => {
             © {new Date().getFullYear()} FOEG Labs. Frontier of Ecosystem Growth.
           </p>
           <p className="text-xs text-muted-foreground font-mono">
-            Built for builders.
+            Infrastructure for AI-Native Businesses
           </p>
         </div>
       </div>
