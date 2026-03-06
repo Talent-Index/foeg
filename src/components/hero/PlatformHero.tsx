@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-const ROTATING_WORDS = ["AI agents", "blockchain systems", "elite builders", "global ecosystems"];
+const ROTATING_WORDS = ["AI systems", "blockchain infrastructure", "business automation", "global ecosystems"];
 
 const PlatformHero = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -47,7 +47,7 @@ const PlatformHero = () => {
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card/50 text-xs font-mono uppercase tracking-widest text-muted-foreground">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Infrastructure Platform
+            Enterprise Infrastructure Platform
           </span>
         </motion.div>
 
@@ -58,9 +58,9 @@ const PlatformHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          The infrastructure{" "}
+          Infrastructure for{" "}
           <br className="hidden sm:block" />
-          layer for{" "}
+          AI-Native{" "}
           <span className="relative inline-block text-primary">
             <AnimatePresence mode="wait">
               <motion.span
@@ -75,6 +75,8 @@ const PlatformHero = () => {
               </motion.span>
             </AnimatePresence>
           </span>
+          <br className="hidden sm:block" />
+          Businesses
         </motion.h1>
 
         {/* Subtitle */}
@@ -84,8 +86,8 @@ const PlatformHero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
-          Deploy enterprise AI systems. Access verified talent.
-          Build on proven infrastructure across Web3 and AI ecosystems.
+          Deploy AI agents, blockchain systems, and operational infrastructure
+          that power modern businesses.
         </motion.p>
 
         {/* CTAs */}
@@ -100,8 +102,8 @@ const PlatformHero = () => {
             size="lg"
             className="rounded-full px-8 py-6 text-base bg-primary text-primary-foreground hover:bg-primary/90 hover-lift"
           >
-            <Link to="/developers">
-              Start Building
+            <Link to="/enterprise">
+              Talk to Enterprise Team
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
@@ -111,7 +113,7 @@ const PlatformHero = () => {
             variant="outline"
             className="rounded-full px-8 py-6 text-base border-border hover:bg-muted/50"
           >
-            <Link to="/enterprise">Talk to Sales</Link>
+            <Link to="/platform">Explore Platform</Link>
           </Button>
         </motion.div>
 
