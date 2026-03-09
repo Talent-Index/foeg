@@ -6,7 +6,7 @@ const pillars = [
   {
     icon: Bot,
     title: "FOEG Enterprise",
-    description: "Deploy AI agents and blockchain infrastructure with enterprise-grade security, compliance, and scale.",
+    description: "AI and blockchain infrastructure for businesses. Operational dashboards, automation pipelines, and data systems tailored to specific industries.",
     tags: ["AI Agents", "Smart Contracts", "Data Pipelines"],
     href: "/enterprise",
     accent: "from-primary/10 to-primary/5",
@@ -14,7 +14,7 @@ const pillars = [
   {
     icon: Blocks,
     title: "FOEG Infrastructure",
-    description: "APIs, SDKs, and developer tooling for building AI-native and Web3 applications at scale.",
+    description: "The programmable layer. Developer APIs, agent frameworks, and smart contract tooling for building AI-native systems at scale.",
     tags: ["APIs", "Agent Framework", "Dev Tools"],
     href: "/developers",
     accent: "from-secondary/30 to-secondary/10",
@@ -22,7 +22,7 @@ const pillars = [
   {
     icon: Users,
     title: "Talent Index",
-    description: "Access verified builders with on-chain reputation, matched to enterprise projects by skill and track record.",
+    description: "A verified network of AI and blockchain engineers matched to enterprise projects. Not a job board — a deployment engine.",
     tags: ["Builder Profiles", "Reputation", "Matching"],
     href: "/talent",
     accent: "from-primary/8 to-secondary/10",
@@ -30,7 +30,7 @@ const pillars = [
   {
     icon: Globe,
     title: "Ecosystem Programs",
-    description: "Protocol partnerships, venture programs, and ecosystem activations that scale builder communities globally.",
+    description: "Strategic partnerships with blockchain protocols, venture funds, universities, and cloud providers. Distribution without headcount.",
     tags: ["Partnerships", "Grants", "Activations"],
     href: "/ecosystem",
     accent: "from-secondary/20 to-primary/5",

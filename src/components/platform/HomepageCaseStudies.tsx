@@ -7,17 +7,17 @@ const studies = [
   {
     title: "AutoFlow — Car Wash Infrastructure",
     category: "Enterprise",
-    metrics: ["Revenue tracking automation", "Performance dashboards", "Operational analytics"],
+    metrics: ["Automated revenue tracking across locations", "Real-time performance dashboards", "Operational analytics replacing manual processes"],
   },
   {
     title: "Scaling Builder Onboarding Across 5 Ecosystems",
     category: "Ecosystem",
-    metrics: ["1,200+ builders activated", "5 ecosystem integrations", "40+ partner organizations"],
+    metrics: ["1,200+ builders activated globally", "5 blockchain ecosystem integrations", "40+ partner organizations onboarded"],
   },
   {
-    title: "AI Agent Deployment for DeFi Protocol",
+    title: "AI Agent Deployment for Financial Infrastructure",
     category: "Enterprise",
-    metrics: ["40% faster execution", "Automated risk analysis", "Real-time monitoring"],
+    metrics: ["40% faster data processing", "Automated risk analysis pipelines", "Real-time monitoring and alerting"],
   },
 ];
 

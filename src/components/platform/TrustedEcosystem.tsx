@@ -21,14 +21,23 @@ const TrustedEcosystem = () => {
           Ecosystem
         </motion.p>
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-display font-medium tracking-tight text-center mb-16"
+          className="text-3xl md:text-4xl lg:text-5xl font-display font-medium tracking-tight text-center mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Integrated with the ecosystems{" "}
+          Embedded in the ecosystems{" "}
           <span className="text-muted-foreground">that power innovation.</span>
         </motion.h2>
+        <motion.p
+          className="text-center text-muted-foreground mb-16 max-w-xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          Cloud partners provide compute. Blockchain partners provide protocol access. Universities provide talent pipelines. Startup programs provide deal flow.
+        </motion.p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {categories.map((cat, i) => (
             <motion.div

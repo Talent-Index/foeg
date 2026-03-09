@@ -5,17 +5,17 @@ const audiences = [
   {
     icon: Building2,
     title: "Businesses",
-    description: "Deploy AI and blockchain infrastructure to automate operations and unlock new growth.",
+    description: "Deploy production-ready AI and blockchain systems without building internal teams. Plug into the future of operations.",
   },
   {
     icon: Code,
     title: "Builders",
-    description: "Build AI agents and Web3 systems using FOEG developer infrastructure and APIs.",
+    description: "Ship AI agents, smart contracts, and automation pipelines using FOEG infrastructure. Earn reputation. Get deployed.",
   },
   {
     icon: Landmark,
     title: "Institutions",
-    description: "Launch innovation programs, ecosystem accelerators, and industry infrastructure.",
+    description: "Launch innovation programs, ecosystem accelerators, and industry infrastructure with built-in talent and technology.",
   },
 ];
 
