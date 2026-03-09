@@ -25,7 +25,7 @@ const PlatformFlywheel = () => {
           Network Effects
         </motion.p>
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-display font-medium tracking-tight text-center mb-16"
+          className="text-3xl md:text-4xl lg:text-5xl font-display font-medium tracking-tight text-center mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -33,6 +33,15 @@ const PlatformFlywheel = () => {
           The FOEG{" "}
           <span className="text-muted-foreground">flywheel.</span>
         </motion.h2>
+        <motion.p
+          className="text-center text-muted-foreground mb-16 max-w-lg mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          Every deployment makes the platform smarter. Every builder makes it more capable. The platform compounds.
+        </motion.p>
 
         {/* Mobile: vertical flow */}
         <div className="md:hidden flex flex-col gap-3 max-w-sm mx-auto">

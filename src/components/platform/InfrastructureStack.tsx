@@ -52,7 +52,7 @@ const InfrastructureStack = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          From underlying cloud and blockchain networks to production business applications — FOEG powers every layer.
+          Every product maps to a layer. Every partner plugs into a layer. Every builder ships within a layer. This is how FOEG delivers value.
         </motion.p>
 
         <div className="flex flex-col gap-3">

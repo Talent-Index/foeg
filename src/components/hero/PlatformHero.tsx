@@ -86,8 +86,7 @@ const PlatformHero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
-          Deploy AI agents, blockchain systems, and operational infrastructure
-          that power modern businesses.
+          The unified platform where enterprises deploy AI agents, connect to blockchain systems, and access elite engineering talent — through a single interface.
         </motion.p>
 
         {/* CTAs */}

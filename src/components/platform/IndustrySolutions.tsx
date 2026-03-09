@@ -6,25 +6,25 @@ const solutions = [
   {
     icon: Car,
     title: "AutoFlow",
-    description: "Infrastructure for car wash operations.",
+    description: "Revenue tracking, performance dashboards, and operational analytics — all automated for car wash and automotive services.",
     href: "/case-studies",
   },
   {
     icon: Truck,
     title: "Logistics Intelligence",
-    description: "AI automation for fleet and delivery companies.",
+    description: "Route optimization, driver analytics, and cost modeling powered by real operational data for fleet companies.",
     href: "/case-studies",
   },
   {
     icon: Store,
     title: "Retail Intelligence",
-    description: "Operational dashboards for multi-branch retail businesses.",
+    description: "Inventory intelligence, sales performance, and branch-level analytics in a single system for multi-location retail.",
     href: "/case-studies",
   },
   {
     icon: Briefcase,
     title: "Service Business Systems",
-    description: "Revenue tracking and automation for service providers.",
+    description: "Revenue tracking, scheduling automation, and client management for service providers scaling beyond spreadsheets.",
     href: "/case-studies",
   },
 ];

@@ -6,27 +6,27 @@ const sections = [
   {
     label: "Problem",
     title: "Businesses lack infrastructure.",
-    body: "Modern enterprises need AI systems, blockchain connectivity, and elite engineering talent — but building this from scratch is slow, expensive, and fragmented.",
+    body: "Across emerging markets, businesses are stuck between two realities: the promise of AI and blockchain, and the absence of infrastructure to deploy them. Building from scratch is slow, expensive, and fragmented.",
   },
   {
     label: "Solution",
-    title: "FOEG Platform.",
-    body: "FOEG Labs provides end-to-end infrastructure connecting enterprises with AI agents, blockchain systems, and verified builders through a single platform.",
+    title: "One platform. Complete infrastructure.",
+    body: "FOEG Labs is the unified platform where enterprises deploy AI agents, connect to blockchain systems, and access elite engineering talent — through a single interface.",
   },
   {
     label: "Architecture",
-    title: "Full-stack platform.",
-    body: "Four layers: underlying infrastructure (AI models, blockchain networks), FOEG platform (enterprise tools, developer portal, talent index), application layer (agents, contracts, pipelines), and business applications (AutoFlow, retail intelligence, logistics).",
+    title: "The full-stack platform.",
+    body: "Four layers: underlying infrastructure (AI models, cloud, blockchain networks), the FOEG platform (enterprise tools, developer portal, talent index), application layer (agents, contracts, pipelines), and industry-specific business applications.",
   },
   {
-    label: "Industry Solutions",
-    title: "Real industries. Real revenue.",
-    body: "AutoFlow for car wash operations. Logistics Intelligence for fleet companies. Retail Intelligence for multi-branch businesses. Service Business Systems for providers.",
+    label: "Traction",
+    title: "Real industries. Production systems.",
+    body: "AutoFlow powers car wash operations. Logistics Intelligence automates fleet companies. Retail Intelligence runs multi-branch analytics. Each is a proof point — FOEG infrastructure works in production, not in theory.",
   },
   {
     label: "Vision",
-    title: "The infrastructure layer for AI-native businesses.",
-    body: "FOEG aims to be the default platform enterprises use to deploy AI and blockchain systems — the way Stripe powers payments or AWS powers cloud.",
+    title: "The Stripe of AI infrastructure.",
+    body: "FOEG is building the default platform enterprises use to deploy AI and blockchain systems — a platform so reliable and integrated that businesses don't ask whether to use it, they ask how fast they can deploy.",
   },
 ];
 
