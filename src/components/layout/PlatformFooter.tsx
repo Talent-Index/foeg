@@ -16,10 +16,10 @@ const footerSections = [
   {
     title: "Resources",
     links: [
-      { label: "Documentation", href: "/developers" },
       { label: "Case Studies", href: "/case-studies" },
       { label: "Research", href: "/research" },
       { label: "Events", href: "/events" },
+      { label: "Why FOEG", href: "/why-foeg" },
     ],
   },
   {
@@ -41,17 +41,17 @@ const PlatformFooter = () => {
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <img src={foegLogo} alt="FOEG Labs" className="h-8 w-auto" />
-              <span className="font-display font-semibold text-foreground">FOEG Labs</span>
+              <span className="font-display text-foreground">FOEG Labs</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              The infrastructure layer connecting enterprises with AI agents, blockchain systems, and elite builders.
+              The infrastructure layer for AI-native businesses.
             </p>
           </div>
 
           {/* Link columns */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-4">
+              <p className="text-xs font-sans uppercase tracking-widest text-muted-foreground mb-4 font-medium">
                 {section.title}
               </p>
               <ul className="space-y-2.5">
@@ -88,7 +88,7 @@ const PlatformFooter = () => {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} FOEG Labs. Frontier of Ecosystem Growth.
           </p>
-          <p className="text-xs text-muted-foreground font-mono">
+          <p className="text-xs text-muted-foreground italic font-display">
             Infrastructure for AI-Native Businesses
           </p>
         </div>

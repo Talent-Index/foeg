@@ -64,7 +64,7 @@ const PlatformNav = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img src={foegLogo} alt="FOEG Labs Logo" className="h-9 w-auto" />
-            <span className="font-display font-semibold text-lg text-foreground">
+            <span className="font-display text-lg text-foreground">
               FOEG Labs
             </span>
           </Link>
@@ -139,11 +139,11 @@ const PlatformNav = () => {
             <Button
               asChild
               size="sm"
-              className="rounded-full text-sm bg-primary text-primary-foreground hover:bg-primary/90"
+              className="rounded-full text-sm"
             >
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Join Community
-              </a>
+              <Link to="/enterprise">
+                Deploy With FOEG
+              </Link>
             </Button>
           </div>
 
@@ -171,7 +171,7 @@ const PlatformNav = () => {
               className="lg:hidden overflow-hidden"
             >
               <div className="mt-4 bg-card border border-border rounded-xl p-4 space-y-1">
-                <p className="px-3 py-2 text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                <p className="px-3 py-2 text-xs font-sans uppercase tracking-wider text-muted-foreground">
                   Platform
                 </p>
                 {platformDropdown.map((item) => (
@@ -202,10 +202,10 @@ const PlatformNav = () => {
                   <Button asChild variant="outline" size="sm" className="flex-1 rounded-full">
                     <Link to="/developers">Docs</Link>
                   </Button>
-                  <Button asChild size="sm" className="flex-1 rounded-full bg-primary text-primary-foreground">
-                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                      Join Community
-                    </a>
+                  <Button asChild size="sm" className="flex-1 rounded-full">
+                    <Link to="/enterprise">
+                      Deploy With FOEG
+                    </Link>
                   </Button>
                 </div>
               </div>

@@ -1,10 +1,11 @@
 import PlatformNav from "@/components/layout/PlatformNav";
 import PlatformHero from "@/components/hero/PlatformHero";
-import PlatformAudience from "@/components/platform/PlatformAudience";
+import WhatWeDo from "@/components/platform/WhatWeDo";
+import PlatformPositioning from "@/components/platform/PlatformPositioning";
 import InfrastructureStack from "@/components/platform/InfrastructureStack";
-import ProductPillars from "@/components/platform/ProductPillars";
 import IndustrySolutions from "@/components/platform/IndustrySolutions";
 import HomepageCaseStudies from "@/components/platform/HomepageCaseStudies";
+import CommunityProof from "@/components/platform/CommunityProof";
 import HomepageTalent from "@/components/platform/HomepageTalent";
 import TrustedEcosystem from "@/components/platform/TrustedEcosystem";
 import PlatformFlywheel from "@/components/platform/PlatformFlywheel";
@@ -16,11 +17,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <PlatformNav />
       <PlatformHero />
-      <PlatformAudience />
+      <WhatWeDo />
+      <PlatformPositioning />
       <InfrastructureStack />
-      <ProductPillars />
       <IndustrySolutions />
       <HomepageCaseStudies />
+      <CommunityProof />
       <HomepageTalent />
       <TrustedEcosystem />
       <PlatformFlywheel />
