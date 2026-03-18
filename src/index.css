@@ -1,105 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* 
 FOEG Labs Design System
-Warm cream background, FOEG Purple accent, editorial serif, premium spacing
+Editorial aesthetic: warm gradients, serif headlines, premium spacing
+Accenture credibility + SheFi emotion + Stripe clarity
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
     /* Warm cream background */
-    --background: 43 33% 94%;
+    --background: 40 33% 97%;
     --foreground: 0 0% 8%;
 
-    --card: 43 30% 96%;
+    --card: 40 25% 95%;
     --card-foreground: 0 0% 8%;
 
-    --popover: 43 33% 94%;
+    --popover: 40 33% 97%;
     --popover-foreground: 0 0% 8%;
 
-    /* FOEG Purple - Brand Primary (#6D28D9 = 263 84% 50%) */
-    --primary: 263 84% 50%;
+    /* Deep charcoal primary for CTAs */
+    --primary: 0 0% 10%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light purple for secondary */
-    --secondary: 263 50% 90%;
-    --secondary-foreground: 263 84% 35%;
+    /* Warm muted secondary */
+    --secondary: 25 30% 92%;
+    --secondary-foreground: 0 0% 20%;
 
-    /* Muted grays */
-    --muted: 40 15% 90%;
-    --muted-foreground: 0 0% 35%;
+    /* Muted tones */
+    --muted: 35 15% 92%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Accent matches primary */
-    --accent: 263 84% 50%;
+    /* Accent - warm coral/orange */
+    --accent: 15 80% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 85%;
-    --input: 40 20% 85%;
-    --ring: 263 84% 50%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 0 0% 10%;
 
-    --radius: 1.5rem;
-    
-    /* Gradient colors for hero */
-    --gradient-pink: 350 70% 85%;
-    --gradient-peach: 25 80% 85%;
-    --gradient-purple: 263 60% 90%;
-    
-    /* Sidebar (keep for compatibility) */
-    --sidebar-background: 43 33% 94%;
+    --radius: 1rem;
+
+    /* Hero gradient palette */
+    --gradient-pink: 340 60% 80%;
+    --gradient-peach: 20 75% 80%;
+    --gradient-lavender: 270 50% 82%;
+    --gradient-coral: 15 80% 70%;
+
+    /* Sidebar */
+    --sidebar-background: 40 33% 97%;
     --sidebar-foreground: 0 0% 23%;
-    --sidebar-primary: 263 84% 50%;
+    --sidebar-primary: 0 0% 10%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 263 50% 95%;
-    --sidebar-accent-foreground: 263 84% 35%;
-    --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 263 84% 50%;
+    --sidebar-accent: 25 30% 94%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 35 20% 90%;
+    --sidebar-ring: 0 0% 10%;
   }
 
   .dark {
-    --background: 240 10% 8%;
-    --foreground: 43 20% 96%;
+    --background: 240 10% 6%;
+    --foreground: 40 15% 95%;
 
-    --card: 240 10% 10%;
-    --card-foreground: 43 20% 96%;
+    --card: 240 10% 9%;
+    --card-foreground: 40 15% 95%;
 
-    --popover: 240 10% 10%;
-    --popover-foreground: 43 20% 96%;
+    --popover: 240 10% 9%;
+    --popover-foreground: 40 15% 95%;
 
-    /* FOEG Purple - slightly lighter in dark mode for visibility */
-    --primary: 263 84% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 263 40% 20%;
-    --secondary-foreground: 263 60% 80%;
+    --secondary: 240 8% 15%;
+    --secondary-foreground: 40 10% 80%;
 
-    --muted: 240 10% 18%;
-    --muted-foreground: 43 10% 60%;
+    --muted: 240 8% 16%;
+    --muted-foreground: 40 8% 55%;
 
-    --accent: 263 84% 60%;
+    --accent: 15 75% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 20%;
-    --input: 240 10% 20%;
-    --ring: 263 84% 60%;
+    --border: 240 8% 18%;
+    --input: 240 8% 18%;
+    --ring: 0 0% 95%;
 
-    /* Sidebar dark */
-    --sidebar-background: 240 10% 8%;
-    --sidebar-foreground: 43 10% 96%;
-    --sidebar-primary: 263 84% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 263 40% 15%;
-    --sidebar-accent-foreground: 263 60% 80%;
-    --sidebar-border: 240 10% 18%;
-    --sidebar-ring: 263 84% 60%;
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 40 8% 90%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 240 8% 12%;
+    --sidebar-accent-foreground: 40 10% 80%;
+    --sidebar-border: 240 8% 16%;
+    --sidebar-ring: 0 0% 95%;
   }
 }
 
@@ -113,7 +115,7 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+    @apply font-display;
   }
   
   html {
@@ -129,56 +131,58 @@ All colors MUST be HSL.
     -webkit-backdrop-filter: blur(12px);
   }
 
-  /* Hero gradient - cream with subtle purple tint */
+  /* Editorial hero gradient - warm pink/peach/lavender */
   .hero-gradient {
-    background: radial-gradient(
-      ellipse 80% 70% at 50% 40%,
-      hsl(263 60% 95% / 0.4) 0%,
-      hsl(350 70% 92% / 0.3) 30%,
-      hsl(var(--background)) 70%
+    background: linear-gradient(
+      135deg,
+      hsl(340 55% 88% / 0.8) 0%,
+      hsl(20 70% 88% / 0.6) 30%,
+      hsl(270 45% 88% / 0.5) 60%,
+      hsl(var(--background)) 100%
     );
   }
 
   .dark .hero-gradient {
-    background: radial-gradient(
-      ellipse 80% 70% at 50% 40%,
-      hsl(263 60% 20% / 0.4) 0%,
-      hsl(263 40% 15% / 0.3) 30%,
-      hsl(var(--background)) 70%
+    background: linear-gradient(
+      135deg,
+      hsl(340 30% 18% / 0.5) 0%,
+      hsl(20 35% 15% / 0.4) 30%,
+      hsl(270 25% 15% / 0.3) 60%,
+      hsl(var(--background)) 100%
     );
   }
 
-  /* Pastel gradient cards */
+  /* Card gradient */
   .card-gradient {
     background: linear-gradient(
       180deg,
-      hsl(263 50% 95%) 0%,
-      hsl(263 40% 90%) 100%
+      hsl(25 30% 95%) 0%,
+      hsl(35 20% 93%) 100%
     );
   }
 
   .dark .card-gradient {
     background: linear-gradient(
       180deg,
-      hsl(263 40% 15%) 0%,
-      hsl(263 30% 12%) 100%
+      hsl(240 10% 12%) 0%,
+      hsl(240 8% 10%) 100%
     );
   }
 
-  /* Testimonial band */
+  /* Warm testimonial band */
   .testimonial-gradient {
     background: linear-gradient(
       180deg,
-      hsl(25 80% 85%) 0%,
-      hsl(35 70% 88%) 100%
+      hsl(20 65% 88%) 0%,
+      hsl(30 55% 90%) 100%
     );
   }
 
   .dark .testimonial-gradient {
     background: linear-gradient(
       180deg,
-      hsl(25 40% 15%) 0%,
-      hsl(35 30% 12%) 100%
+      hsl(20 35% 14%) 0%,
+      hsl(30 25% 11%) 100%
     );
   }
 
@@ -205,7 +209,7 @@ All colors MUST be HSL.
   
   .hover-lift:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px hsl(263 84% 50% / 0.25);
+    box-shadow: 0 8px 24px hsl(0 0% 0% / 0.12);
   }
 
   /* Marquee animation */
@@ -213,28 +217,19 @@ All colors MUST be HSL.
     animation: marquee 25s linear infinite;
   }
 
-  /* Shimmer animation for New Year banner */
   .animate-shimmer {
     animation: shimmer 3s ease-in-out infinite;
   }
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 @keyframes float-slow {

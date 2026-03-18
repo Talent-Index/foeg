@@ -4,6 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
+// Community images
+import heroComm from "@/assets/hero-community.jpeg";
+import eventVenue from "@/assets/event-venue.jpeg";
+import workshopSession from "@/assets/workshop-session.jpeg";
+import girlsOnchain from "@/assets/girls-onchain.jpeg";
+import hackathonAudience from "@/assets/hackathon-audience.jpeg";
+import studentsWorkshop from "@/assets/students-workshop.jpeg";
+import womenConnectGroup from "@/assets/women-connect-group.jpeg";
+import awardWinners from "@/assets/awards-winners.jpeg";
+
 const ROTATING_WORDS = ["AI systems", "blockchain infrastructure", "business automation", "global ecosystems"];
 
 const PlatformHero = () => {
@@ -17,51 +27,88 @@ const PlatformHero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-      {/* Grid background */}
-      <div
-        className="absolute inset-0 opacity-[0.08] dark:opacity-[0.06]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: "64px 64px",
-        }}
-      />
+    <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden hero-gradient">
+      {/* Left image collage */}
+      <div className="absolute left-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-24">
+        <motion.div
+          className="flex-1 rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <img src={heroComm} alt="FOEG community collaboration" className="w-full h-full object-cover" />
+        </motion.div>
+        <motion.div
+          className="flex-1 rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <img src={workshopSession} alt="Workshop session" className="w-full h-full object-cover" />
+        </motion.div>
+        <motion.div
+          className="h-[30%] rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
+          <img src={girlsOnchain} alt="Girls on-chain workshop" className="w-full h-full object-cover" />
+        </motion.div>
+      </div>
 
-      {/* Radial fade overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `radial-gradient(ellipse 60% 60% at 50% 50%, transparent 0%, hsl(var(--background)) 70%)`,
-        }}
-      />
+      {/* Right image collage */}
+      <div className="absolute right-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-24">
+        <motion.div
+          className="h-[30%] rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img src={hackathonAudience} alt="Hackathon audience" className="w-full h-full object-cover" />
+        </motion.div>
+        <motion.div
+          className="flex-1 rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <img src={eventVenue} alt="Event venue" className="w-full h-full object-cover" />
+        </motion.div>
+        <motion.div
+          className="flex-1 rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <img src={studentsWorkshop} alt="Student workshops" className="w-full h-full object-cover" />
+        </motion.div>
+      </div>
 
-      {/* Subtle glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
-
-      <div className="relative z-10 container mx-auto px-4 text-center max-w-5xl">
+      {/* Center content */}
+      <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card/50 text-xs font-mono uppercase tracking-widest text-muted-foreground">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background/60 text-xs font-sans font-medium uppercase tracking-widest text-muted-foreground">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Enterprise Infrastructure Platform
           </span>
         </motion.div>
 
         {/* Headline */}
         <motion.h1
-          className="mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-medium tracking-tight leading-[1.05]"
+          className="mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight leading-[1.1]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          Infrastructure for{" "}
-          <br className="hidden sm:block" />
-          AI-Native{" "}
-          <span className="relative inline-block text-primary">
+          The infrastructure layer
+          <br />
+          for{" "}
+          <span className="relative inline-block italic text-accent">
             <AnimatePresence mode="wait">
               <motion.span
                 key={wordIndex}
@@ -75,18 +122,28 @@ const PlatformHero = () => {
               </motion.span>
             </AnimatePresence>
           </span>
-          <br className="hidden sm:block" />
-          Businesses
         </motion.h1>
 
-        {/* Subtitle */}
+        {/* Subtext */}
         <motion.p
-          className="mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+          className="mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
-          The unified platform where enterprises deploy AI agents, connect to blockchain systems, and access elite engineering talent — through a single interface.
+          Deploy AI systems. Integrate blockchain. Access elite talent.
+          <br className="hidden sm:block" />
+          All from one unified platform.
+        </motion.p>
+
+        {/* Supporting line */}
+        <motion.p
+          className="mt-3 text-sm text-muted-foreground/70"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.65, duration: 0.5 }}
+        >
+          From infrastructure to application — FOEG powers every layer of your business.
         </motion.p>
 
         {/* CTAs */}
@@ -99,10 +156,10 @@ const PlatformHero = () => {
           <Button
             asChild
             size="lg"
-            className="rounded-full px-8 py-6 text-base bg-primary text-primary-foreground hover:bg-primary/90 hover-lift"
+            className="rounded-full px-8 py-6 text-base hover-lift"
           >
             <Link to="/enterprise">
-              Talk to Enterprise Team
+              Deploy With FOEG
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
@@ -110,18 +167,28 @@ const PlatformHero = () => {
             asChild
             size="lg"
             variant="outline"
-            className="rounded-full px-8 py-6 text-base border-border hover:bg-muted/50"
+            className="rounded-full px-8 py-6 text-base border-foreground/20 hover:bg-foreground/5"
           >
             <Link to="/platform">Explore Platform</Link>
           </Button>
         </motion.div>
 
-        {/* Metrics bar */}
-        <motion.div
-          className="mt-16 md:mt-20 flex flex-wrap justify-center gap-8 md:gap-14"
+        {/* Trust line */}
+        <motion.p
+          className="mt-8 text-xs font-sans uppercase tracking-widest text-muted-foreground/60"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.7 }}
+        >
+          Backed by leading ecosystems, protocols & enterprise partners
+        </motion.p>
+
+        {/* Metrics bar */}
+        <motion.div
+          className="mt-10 md:mt-14 flex flex-wrap justify-center gap-8 md:gap-14"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.1, duration: 0.7 }}
         >
           {[
             { value: "1,200+", label: "Builders" },
@@ -130,15 +197,32 @@ const PlatformHero = () => {
             { value: "50+", label: "Events" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-2xl md:text-3xl font-display font-medium text-foreground">
+              <p className="text-2xl md:text-3xl font-display text-foreground">
                 {stat.value}
               </p>
-              <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mt-1">
+              <p className="text-xs font-sans uppercase tracking-wider text-muted-foreground mt-1">
                 {stat.label}
               </p>
             </div>
           ))}
         </motion.div>
+      </div>
+
+      {/* Mobile image strip */}
+      <div className="absolute bottom-0 left-0 right-0 xl:hidden">
+        <div className="flex gap-2 px-4 pb-4 overflow-hidden">
+          {[womenConnectGroup, awardWinners, hackathonAudience].map((img, i) => (
+            <motion.div
+              key={i}
+              className="w-1/3 h-20 rounded-xl overflow-hidden opacity-40"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 0.4, y: 0 }}
+              transition={{ delay: 1.2 + i * 0.1 }}
+            >
+              <img src={img} alt="FOEG community" className="w-full h-full object-cover" />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

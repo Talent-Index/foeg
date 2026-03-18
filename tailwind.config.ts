@@ -9,7 +9,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1200px",
+        "2xl": "1280px",
       },
     },
     extend: {
@@ -86,7 +86,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
+        display: ['Instrument Serif', 'Georgia', 'ui-serif', 'serif'],
       },
       spacing: {
         '18': '4.5rem',

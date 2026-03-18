@@ -12,9 +12,9 @@ const builders = [
 ];
 
 const tierColor: Record<string, string> = {
-  Builder: "border-primary/30 text-primary",
-  Architect: "border-primary/50 text-primary",
-  Principal: "border-primary text-primary",
+  Builder: "border-accent/30 text-accent",
+  Architect: "border-accent/50 text-accent",
+  Principal: "border-accent text-accent",
 };
 
 const HomepageTalent = () => {
@@ -24,21 +24,21 @@ const HomepageTalent = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-6">
           <div>
             <motion.p
-              className="text-xs font-mono uppercase tracking-widest text-primary mb-3"
+              className="text-xs font-sans uppercase tracking-widest text-accent mb-3 font-medium"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              Talent Index
+              Talent-as-a-Service
             </motion.p>
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-display font-medium tracking-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-display tracking-tight leading-[1.1]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               Deploy elite AI &{" "}
-              <span className="text-muted-foreground">blockchain engineers.</span>
+              <span className="italic text-muted-foreground">blockchain engineers.</span>
             </motion.h2>
             <motion.p
               className="mt-4 text-muted-foreground max-w-xl"
@@ -47,7 +47,7 @@ const HomepageTalent = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              Access verified builders with proven experience deploying AI agents, blockchain infrastructure, and production systems.
+              Vetted builders with proven experience deploying AI agents, blockchain infrastructure, and production systems — embedded directly into your team.
             </motion.p>
           </div>
           <Button asChild variant="outline" className="rounded-full self-start md:self-auto">
@@ -66,7 +66,7 @@ const HomepageTalent = () => {
           transition={{ delay: 0.1 }}
         >
           {filters.map((f) => (
-            <span key={f} className="text-xs font-mono px-3 py-1.5 rounded-full border border-border text-muted-foreground hover:border-primary/30 hover:text-foreground cursor-pointer transition-colors">
+            <span key={f} className="text-xs font-sans px-3 py-1.5 rounded-full border border-border text-muted-foreground hover:border-accent/30 hover:text-foreground cursor-pointer transition-colors">
               {f}
             </span>
           ))}
@@ -77,17 +77,17 @@ const HomepageTalent = () => {
           {builders.map((b, i) => (
             <motion.div
               key={b.name}
-              className="p-6 rounded-2xl border border-border bg-card/50 hover:border-primary/30 transition-all"
+              className="p-6 rounded-2xl border border-border bg-card/50 hover:border-accent/30 hover:shadow-lg transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium text-primary">
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-sm font-medium text-accent">
                   {b.name.charAt(0)}
                 </div>
-                <span className={`text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full border ${tierColor[b.tier]}`}>
+                <span className={`text-[10px] font-sans uppercase tracking-wider px-2 py-0.5 rounded-full border font-medium ${tierColor[b.tier]}`}>
                   {b.tier}
                 </span>
               </div>
@@ -95,7 +95,7 @@ const HomepageTalent = () => {
               <p className="text-sm text-muted-foreground mb-4">{b.role}</p>
               <div className="flex flex-wrap gap-1.5">
                 {b.skills.map((s) => (
-                  <span key={s} className="text-[11px] font-mono px-2 py-0.5 rounded-full border border-border text-muted-foreground">
+                  <span key={s} className="text-[11px] font-sans px-2 py-0.5 rounded-full border border-border text-muted-foreground">
                     {s}
                   </span>
                 ))}
