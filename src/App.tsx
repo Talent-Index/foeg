@@ -16,6 +16,7 @@ import WhyFoeg from "./pages/WhyFoeg";
 import Ecosystem from "./pages/Ecosystem";
 import CaseStudies from "./pages/CaseStudies";
 import Research from "./pages/Research";
+import UseCases from "./pages/UseCases";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/ecosystem" element={<Ecosystem />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/use-cases" element={<UseCases />} />
           <Route path="/why-foeg" element={<WhyFoeg />} />
           <Route path="/events" element={<Events />} />
           <Route path="/blueprint" element={<Blueprint />} />
