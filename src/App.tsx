@@ -16,6 +16,7 @@ import WhyFoeg from "./pages/WhyFoeg";
 import Ecosystem from "./pages/Ecosystem";
 import CaseStudies from "./pages/CaseStudies";
 import Research from "./pages/Research";
+import UseCases from "./pages/UseCases";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
