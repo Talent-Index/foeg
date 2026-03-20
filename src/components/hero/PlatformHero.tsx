@@ -39,19 +39,6 @@ const PlatformHero = () => {
 
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Left collage - stacked with slight rotation */}
-      <div className="absolute left-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-28">
-        <ImageCard src={heroComm} alt="FOEG community" className="flex-1 -rotate-2" delay={0.3} />
-        <ImageCard src={workshopSession} alt="Workshop session" className="flex-1 rotate-1" delay={0.5} />
-        <ImageCard src={girlsOnchain} alt="Girls on-chain" className="h-[28%] -rotate-1" delay={0.7} />
-      </div>
-
-      {/* Right collage - mirrored */}
-      <div className="absolute right-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-28">
-        <ImageCard src={hackathonAudience} alt="Hackathon" className="h-[28%] rotate-1" delay={0.4} />
-        <ImageCard src={eventVenue} alt="Event venue" className="flex-1 -rotate-1" delay={0.6} />
-        <ImageCard src={studentsWorkshop} alt="Students" className="flex-1 rotate-2" delay={0.8} />
-      </div>
 
       {/* Center content */}
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
