@@ -5,27 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ActivityTicker from "./ActivityTicker";
 
-import heroComm from "@/assets/hero-community.jpeg";
-import eventVenue from "@/assets/event-venue.jpeg";
-import workshopSession from "@/assets/workshop-session.jpeg";
-import girlsOnchain from "@/assets/girls-onchain.jpeg";
-import hackathonAudience from "@/assets/hackathon-audience.jpeg";
-import studentsWorkshop from "@/assets/students-workshop.jpeg";
-import womenConnectGroup from "@/assets/women-connect-group.jpeg";
-import awardWinners from "@/assets/awards-winners.jpeg";
-
 const ROTATING_WORDS = ["AI systems", "blockchain infrastructure", "business automation", "global ecosystems"];
-
-const ImageCard = ({ src, alt, className, delay }: { src: string; alt: string; className?: string; delay: number }) => (
-  <motion.div
-    className={`rounded-2xl overflow-hidden shadow-lg ${className || ""}`}
-    initial={{ opacity: 0, scale: 0.92 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.7, delay }}
-  >
-    <img src={src} alt={alt} className="w-full h-full object-cover" />
-  </motion.div>
-);
 
 const PlatformHero = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -39,19 +19,6 @@ const PlatformHero = () => {
 
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Left collage - stacked with slight rotation */}
-      <div className="absolute left-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-28">
-        <ImageCard src={heroComm} alt="FOEG community" className="flex-1 -rotate-2" delay={0.3} />
-        <ImageCard src={workshopSession} alt="Workshop session" className="flex-1 rotate-1" delay={0.5} />
-        <ImageCard src={girlsOnchain} alt="Girls on-chain" className="h-[28%] -rotate-1" delay={0.7} />
-      </div>
-
-      {/* Right collage - mirrored */}
-      <div className="absolute right-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-28">
-        <ImageCard src={hackathonAudience} alt="Hackathon" className="h-[28%] rotate-1" delay={0.4} />
-        <ImageCard src={eventVenue} alt="Event venue" className="flex-1 -rotate-1" delay={0.6} />
-        <ImageCard src={studentsWorkshop} alt="Students" className="flex-1 rotate-2" delay={0.8} />
-      </div>
 
       {/* Center content */}
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
@@ -175,22 +142,6 @@ const PlatformHero = () => {
         </motion.div>
       </div>
 
-      {/* Mobile image strip */}
-      <div className="absolute bottom-0 left-0 right-0 xl:hidden">
-        <div className="flex gap-2 px-4 pb-4 overflow-hidden">
-          {[womenConnectGroup, awardWinners, hackathonAudience].map((img, i) => (
-            <motion.div
-              key={i}
-              className="w-1/3 h-20 rounded-xl overflow-hidden opacity-40"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 0.4, y: 0 }}
-              transition={{ delay: 1.2 + i * 0.1 }}
-            >
-              <img src={img} alt="FOEG community" className="w-full h-full object-cover" />
-            </motion.div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };
