@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import ActivityTicker from "./ActivityTicker";
 
-// Community images
 import heroComm from "@/assets/hero-community.jpeg";
 import eventVenue from "@/assets/event-venue.jpeg";
 import workshopSession from "@/assets/workshop-session.jpeg";
@@ -15,6 +15,17 @@ import womenConnectGroup from "@/assets/women-connect-group.jpeg";
 import awardWinners from "@/assets/awards-winners.jpeg";
 
 const ROTATING_WORDS = ["AI systems", "blockchain infrastructure", "business automation", "global ecosystems"];
+
+const ImageCard = ({ src, alt, className, delay }: { src: string; alt: string; className?: string; delay: number }) => (
+  <motion.div
+    className={`rounded-2xl overflow-hidden shadow-lg ${className || ""}`}
+    initial={{ opacity: 0, scale: 0.92 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.7, delay }}
+  >
+    <img src={src} alt={alt} className="w-full h-full object-cover" />
+  </motion.div>
+);
 
 const PlatformHero = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -28,65 +39,22 @@ const PlatformHero = () => {
 
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Left image collage */}
-      <div className="absolute left-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-24">
-        <motion.div
-          className="flex-1 rounded-2xl overflow-hidden"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <img src={heroComm} alt="FOEG community collaboration" className="w-full h-full object-cover" />
-        </motion.div>
-        <motion.div
-          className="flex-1 rounded-2xl overflow-hidden"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <img src={workshopSession} alt="Workshop session" className="w-full h-full object-cover" />
-        </motion.div>
-        <motion.div
-          className="h-[30%] rounded-2xl overflow-hidden"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-        >
-          <img src={girlsOnchain} alt="Girls on-chain workshop" className="w-full h-full object-cover" />
-        </motion.div>
+      {/* Left collage - stacked with slight rotation */}
+      <div className="absolute left-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-28">
+        <ImageCard src={heroComm} alt="FOEG community" className="flex-1 -rotate-2" delay={0.3} />
+        <ImageCard src={workshopSession} alt="Workshop session" className="flex-1 rotate-1" delay={0.5} />
+        <ImageCard src={girlsOnchain} alt="Girls on-chain" className="h-[28%] -rotate-1" delay={0.7} />
       </div>
 
-      {/* Right image collage */}
-      <div className="absolute right-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-24">
-        <motion.div
-          className="h-[30%] rounded-2xl overflow-hidden"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <img src={hackathonAudience} alt="Hackathon audience" className="w-full h-full object-cover" />
-        </motion.div>
-        <motion.div
-          className="flex-1 rounded-2xl overflow-hidden"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <img src={eventVenue} alt="Event venue" className="w-full h-full object-cover" />
-        </motion.div>
-        <motion.div
-          className="flex-1 rounded-2xl overflow-hidden"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <img src={studentsWorkshop} alt="Student workshops" className="w-full h-full object-cover" />
-        </motion.div>
+      {/* Right collage - mirrored */}
+      <div className="absolute right-0 top-0 bottom-0 w-[22%] hidden xl:flex flex-col gap-3 p-4 pt-28">
+        <ImageCard src={hackathonAudience} alt="Hackathon" className="h-[28%] rotate-1" delay={0.4} />
+        <ImageCard src={eventVenue} alt="Event venue" className="flex-1 -rotate-1" delay={0.6} />
+        <ImageCard src={studentsWorkshop} alt="Students" className="flex-1 rotate-2" delay={0.8} />
       </div>
 
       {/* Center content */}
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
-        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,7 +66,6 @@ const PlatformHero = () => {
           </span>
         </motion.div>
 
-        {/* Headline */}
         <motion.h1
           className="mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-tight leading-[1.1]"
           initial={{ opacity: 0, y: 30 }}
@@ -124,7 +91,6 @@ const PlatformHero = () => {
           </span>
         </motion.h1>
 
-        {/* Subtext */}
         <motion.p
           className="mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed"
           initial={{ opacity: 0 }}
@@ -136,7 +102,6 @@ const PlatformHero = () => {
           All from one unified platform.
         </motion.p>
 
-        {/* Supporting line */}
         <motion.p
           className="mt-3 text-sm text-muted-foreground/70"
           initial={{ opacity: 0 }}
@@ -153,11 +118,7 @@ const PlatformHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
-          <Button
-            asChild
-            size="lg"
-            className="rounded-full px-8 py-6 text-base hover-lift"
-          >
+          <Button asChild size="lg" className="rounded-full px-8 py-6 text-base hover-lift">
             <Link to="/enterprise">
               Deploy With FOEG
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -169,8 +130,18 @@ const PlatformHero = () => {
             variant="outline"
             className="rounded-full px-8 py-6 text-base border-foreground/20 hover:bg-foreground/5"
           >
-            <Link to="/platform">Explore Platform</Link>
+            <Link to="/use-cases">Explore Use Cases</Link>
           </Button>
+        </motion.div>
+
+        {/* Activity ticker */}
+        <motion.div
+          className="mt-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9 }}
+        >
+          <ActivityTicker />
         </motion.div>
 
         {/* Trust line */}
@@ -183,7 +154,7 @@ const PlatformHero = () => {
           Backed by leading ecosystems, protocols & enterprise partners
         </motion.p>
 
-        {/* Metrics bar */}
+        {/* Proof bar */}
         <motion.div
           className="mt-10 md:mt-14 flex flex-wrap justify-center gap-8 md:gap-14"
           initial={{ opacity: 0 }}
@@ -197,12 +168,8 @@ const PlatformHero = () => {
             { value: "50+", label: "Events" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-2xl md:text-3xl font-display text-foreground">
-                {stat.value}
-              </p>
-              <p className="text-xs font-sans uppercase tracking-wider text-muted-foreground mt-1">
-                {stat.label}
-              </p>
+              <p className="text-2xl md:text-3xl font-display text-foreground">{stat.value}</p>
+              <p className="text-xs font-sans uppercase tracking-wider text-muted-foreground mt-1">{stat.label}</p>
             </div>
           ))}
         </motion.div>
