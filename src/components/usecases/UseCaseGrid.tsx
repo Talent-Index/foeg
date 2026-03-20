@@ -1,47 +1,46 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { FileCheck, Truck, ShieldCheck, BarChart3, Zap, ArrowRight } from "lucide-react";
+import { FileCheck, ShoppingCart, ShieldAlert, Smartphone, ClipboardCheck, ArrowRight } from "lucide-react";
 
 const useCases = [
   {
     id: "invoice-assurance",
     icon: FileCheck,
     title: "Zero-Touch Invoice Assurance",
+    industry: "Enterprise Finance",
+    problem: "Manual invoice processing causes 3–5 day delays, 2–4% error rates, and exposes organizations to duplicate and fraudulent submissions worth millions annually.",
+    layers: ["AI Layer", "Blockchain Layer", "Middleware", "ERP"],
+  },
+  {
+    id: "autonomous-procurement",
+    icon: ShoppingCart,
+    title: "Autonomous Procurement System",
+    industry: "Supply Chain & Procurement",
+    problem: "Procurement cycles take 14–30 days with fragmented approvals, manual vendor scoring, and zero visibility into spend optimization opportunities.",
+    layers: ["AI Layer", "Middleware", "ERP"],
+  },
+  {
+    id: "fraud-detection",
+    icon: ShieldAlert,
+    title: "Fraud Detection Engine",
     industry: "Financial Services",
-    problem: "Manual invoice processing causes delays, errors, and fraud exposure across enterprise supply chains.",
-    layers: ["AI Layer", "Blockchain Layer", "Application Layer"],
+    problem: "Traditional rule-based fraud systems miss 40% of sophisticated attacks while generating 80%+ false positives, costing enterprises both revenue and customer trust.",
+    layers: ["AI Layer", "Blockchain Layer", "Middleware"],
   },
   {
-    id: "supply-chain-provenance",
-    icon: Truck,
-    title: "Supply Chain Provenance Tracking",
-    industry: "Logistics & Manufacturing",
-    problem: "Multi-party supply chains lack transparency, making compliance and quality audits slow and unreliable.",
-    layers: ["Blockchain Layer", "Cloud Layer", "Application Layer"],
+    id: "erp-payments",
+    icon: Smartphone,
+    title: "ERP-Native Payments (M-Pesa)",
+    industry: "Emerging Market Commerce",
+    problem: "Businesses in Africa reconcile mobile money payments manually — M-Pesa transactions sit in spreadsheets for days before hitting the ERP, causing cash flow blindness.",
+    layers: ["Middleware", "ERP", "Blockchain Layer"],
   },
   {
-    id: "automated-compliance",
-    icon: ShieldCheck,
-    title: "Automated Regulatory Compliance",
-    industry: "Government & Enterprise",
-    problem: "Compliance reporting is manual, error-prone, and fails to keep up with evolving regulatory frameworks.",
-    layers: ["AI Layer", "Application Layer", "Talent Layer"],
-  },
-  {
-    id: "predictive-operations",
-    icon: BarChart3,
-    title: "Predictive Operations Intelligence",
-    industry: "Mobility & Services",
-    problem: "Operations teams rely on lagging indicators and spreadsheet-based planning, missing revenue optimization opportunities.",
-    layers: ["AI Layer", "Cloud Layer", "Application Layer"],
-  },
-  {
-    id: "tokenized-assets",
-    icon: Zap,
-    title: "Tokenized Asset Management",
-    industry: "Real Estate & Finance",
-    problem: "Illiquid real-world assets lack transparent ownership, fractional access, and programmable settlement.",
-    layers: ["Blockchain Layer", "Cloud Layer", "Talent Layer"],
+    id: "onchain-audit",
+    icon: ClipboardCheck,
+    title: "On-Chain Audit & Compliance Layer",
+    industry: "Regulatory & Governance",
+    problem: "Audit preparation takes 6–12 weeks of manual document gathering. Regulators distrust self-reported data, and compliance failures carry 7-figure penalties.",
+    layers: ["Blockchain Layer", "AI Layer", "ERP"],
   },
 ];
 
@@ -56,11 +55,11 @@ const UseCaseGrid = () => {
           viewport={{ once: true }}
         >
           <p className="text-xs font-sans uppercase tracking-widest text-accent mb-3 font-medium">
-            Enterprise Applications
+            Production Use Cases
           </p>
           <h2 className="text-3xl md:text-4xl font-display tracking-tight leading-[1.1]">
             From concept to{" "}
-            <span className="italic text-muted-foreground">production.</span>
+            <span className="italic text-muted-foreground">deployed infrastructure.</span>
           </h2>
         </motion.div>
 
@@ -85,7 +84,7 @@ const UseCaseGrid = () => {
                 {uc.layers.map((layer) => (
                   <span
                     key={layer}
-                    className="text-[10px] font-sans px-2.5 py-0.5 rounded-full border border-border bg-background/60 text-muted-foreground"
+                    className="text-[10px] font-sans px-2.5 py-0.5 rounded-full border border-accent/20 bg-accent/5 text-accent font-medium"
                   >
                     {layer}
                   </span>

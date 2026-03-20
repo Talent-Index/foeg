@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import foegLogo from "@/assets/foeg-logo.png";
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz";
+const WHATSAPP_URL = "https://chat.whatsapp.com/FphprlAP6S6LqrwOIc1nXz?mode=gi_t";
+const TALENT_URL = "https://talent-index-ke.vercel.app/";
+const CONTACT_EMAIL = "foeglabslimited@gmail.com";
 
 const footerSections = [
   {
@@ -9,8 +11,9 @@ const footerSections = [
     links: [
       { label: "FOEG Enterprise", href: "/enterprise" },
       { label: "Infrastructure", href: "/developers" },
-      { label: "Talent Index", href: "/talent" },
+      { label: "Talent Index", href: TALENT_URL, external: true },
       { label: "Ecosystem", href: "/ecosystem" },
+      { label: "Use Cases", href: "/use-cases" },
     ],
   },
   {
@@ -27,7 +30,7 @@ const footerSections = [
     links: [
       { label: "Join WhatsApp", href: WHATSAPP_URL, external: true },
       { label: "Builder Pathways", href: "/#pathways" },
-      { label: "Talent Network", href: "/talent" },
+      { label: "Talent Network", href: TALENT_URL, external: true },
     ],
   },
 ];
@@ -43,9 +46,15 @@ const PlatformFooter = () => {
               <img src={foegLogo} alt="FOEG Labs" className="h-8 w-auto" />
               <span className="font-display text-foreground">FOEG Labs</span>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               The infrastructure layer for AI-native businesses.
             </p>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-sm text-accent hover:underline"
+            >
+              {CONTACT_EMAIL}
+            </a>
           </div>
 
           {/* Link columns */}
