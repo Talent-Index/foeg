@@ -162,22 +162,6 @@ const PlatformHero = () => {
         </motion.div>
       </div>
 
-      {/* Mobile image strip */}
-      <div className="absolute bottom-0 left-0 right-0 xl:hidden">
-        <div className="flex gap-2 px-4 pb-4 overflow-hidden">
-          {[womenConnectGroup, awardWinners, hackathonAudience].map((img, i) => (
-            <motion.div
-              key={i}
-              className="w-1/3 h-20 rounded-xl overflow-hidden opacity-40"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 0.4, y: 0 }}
-              transition={{ delay: 1.2 + i * 0.1 }}
-            >
-              <img src={img} alt="FOEG community" className="w-full h-full object-cover" />
-            </motion.div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };
