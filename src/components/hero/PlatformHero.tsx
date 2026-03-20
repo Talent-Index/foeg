@@ -5,27 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ActivityTicker from "./ActivityTicker";
 
-import heroComm from "@/assets/hero-community.jpeg";
-import eventVenue from "@/assets/event-venue.jpeg";
-import workshopSession from "@/assets/workshop-session.jpeg";
-import girlsOnchain from "@/assets/girls-onchain.jpeg";
-import hackathonAudience from "@/assets/hackathon-audience.jpeg";
-import studentsWorkshop from "@/assets/students-workshop.jpeg";
-import womenConnectGroup from "@/assets/women-connect-group.jpeg";
-import awardWinners from "@/assets/awards-winners.jpeg";
-
 const ROTATING_WORDS = ["AI systems", "blockchain infrastructure", "business automation", "global ecosystems"];
-
-const ImageCard = ({ src, alt, className, delay }: { src: string; alt: string; className?: string; delay: number }) => (
-  <motion.div
-    className={`rounded-2xl overflow-hidden shadow-lg ${className || ""}`}
-    initial={{ opacity: 0, scale: 0.92 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.7, delay }}
-  >
-    <img src={src} alt={alt} className="w-full h-full object-cover" />
-  </motion.div>
-);
 
 const PlatformHero = () => {
   const [wordIndex, setWordIndex] = useState(0);
